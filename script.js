@@ -40,9 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form submission handling
     const contactForm = document.getElementById('contactForm');
     
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+       if (contactForm) {
+       contactForm.addEventListener('submit', function(e) {
+           // Let the form submit to Formspree naturally
+           // Don't call e.preventDefault()
+           console.log('Form submitted');
+       });
+   }
             
             // Get form data
             const formData = {
